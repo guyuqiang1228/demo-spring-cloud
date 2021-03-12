@@ -1,0 +1,36 @@
+server:
+  port: 8888
+
+spring:
+  # 应用名
+  application:
+    name: demo-database-mybatisplus
+  # 注册到nacos注册中心
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1/pika?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    # 连接池配置
+    initial-size: 1
+    max-active: 40
+    min-idle: 1
+
+mybatis-plus:
+  mapper-locations: classpath*:com/pika/boot/mapper*.xml
+#  config-location: classpath:mybatis.cfg.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# nacos配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+

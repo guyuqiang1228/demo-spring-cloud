@@ -4,17 +4,9 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- SpringBoot父工程 -->
-    <!--<parent>
-         <groupId>org.springframework.boot</groupId>
-         <artifactId>spring-boot-starter-parent</artifactId>
-         <version>2.4.3</version>
-         <relativePath/> &lt;!&ndash; lookup parent from repository &ndash;&gt;
-     </parent>-->
-
     <!-- 本项目GAV坐标 -->
-    <groupId>com.demoSpringCloud</groupId>
-    <artifactId>demo</artifactId>
+    <groupId>com.pika-cloud</groupId>
+    <artifactId>pika</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <packaging>pom</packaging>
@@ -30,21 +22,19 @@
         <spring-cloud-alibaba.version>2.2.5.RELEASE</spring-cloud-alibaba.version>
         <log4j.version>1.2.17</log4j.version>
         <lombok.version>1.18.18</lombok.version>
-        <mysql.version>8.0.23</mysql.version>
-        <druid.verison>1.2.5</druid.verison>
-        <hutool.verison>5.5.9</hutool.verison>
-        <mybatis-plus.boot.verison>3.4.2</mybatis-plus.boot.verison>
+        <hutool.version>5.5.9</hutool.version>
+        <lang3.version>3.12.0</lang3.version>
+        <swagger.version>3.0.0</swagger.version>
     </properties>
 
     <!--【项目子模块】-->
     <modules>
-        <module>demo-nacos-provider</module>
+        <module>pika-database</module>
     </modules>
 
-    <!--子模块继承之后，提供作用：锁定版本+子module不用写groupId和version -->
+    <!--子模块继承之后，提供作用：锁定版本,子module不用写groupId和version -->
     <dependencyManagement>
         <dependencies>
-
             <!-- spring boot -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
@@ -72,39 +62,23 @@
                 <scope>import</scope>
             </dependency>
 
-            <!-- MySql -->
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>${mysql.version}</version>
-            </dependency>
-
-            <!-- Druid -->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>druid-spring-boot-starter</artifactId>
-                <version>${druid.verison}</version>
-            </dependency>
-
-            <!-- mybatis-plus-springboot整合 -->
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>${mybatis-plus.boot.verison}</version>
-            </dependency>
-
-            <!--lombok-->
-            <dependency>
-                <groupId>org.projectlombok</groupId>
-                <artifactId>lombok</artifactId>
-                <version>${lombok.version}</version>
-            </dependency>
-
             <!-- log4j -->
             <dependency>
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
                 <version>${log4j.version}</version>
+            </dependency>
+
+            <!-- swagger -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
             </dependency>
 
             <!-- hutool工具包 -->
@@ -114,6 +88,12 @@
                 <version>${hutool.version}</version>
             </dependency>
 
+            <!-- lang3工具类 -->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${lang3.version}</version>
+            </dependency>
 
         </dependencies>
     </dependencyManagement>
