@@ -1,12 +1,13 @@
 package com.pika.boot.dao;
 
-import com.pika.boot.entity.Worker;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.pika.boot.entity.Worker;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * <p>
- *  Mapper 接口
+ * Mapper 接口
  * </p>
  *
  * @author guyuqiang
@@ -14,5 +15,7 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface WorkerDao extends BaseMapper<Worker> {
+
+    Worker getInfoById(@Param("id") Integer id);
 
 }

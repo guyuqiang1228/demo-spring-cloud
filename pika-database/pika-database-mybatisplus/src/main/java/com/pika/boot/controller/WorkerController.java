@@ -1,6 +1,5 @@
 package com.pika.boot.controller;
 
-
 import com.pika.boot.biz.WorkerBiz;
 import com.pika.boot.entity.Worker;
 import io.swagger.annotations.Api;
@@ -32,10 +31,19 @@ public class WorkerController {
     private WorkerBiz workerBiz;
 
     @ApiOperation(value = "获得worker名字")
-    @GetMapping("/{id}")
+    @GetMapping("/name/{id}")
     public String getName(@PathVariable("id") Integer id) {
         Worker worker = workerBiz.getById(id);
         return worker.getName();
     }
+
+    @ApiOperation(value = "111")
+    @GetMapping("/info/{id}")
+    public String getInfo(@PathVariable("id") Integer id) {
+        Worker worker = workerBiz.getInfoById(id);
+        return worker.toString();
+    }
+
+
 
 }

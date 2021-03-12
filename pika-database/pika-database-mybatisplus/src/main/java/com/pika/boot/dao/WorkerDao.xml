@@ -14,4 +14,10 @@
         id, name, age
     </sql>
 
+    <select id="getInfoById" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from worker
+        where id = #{id}
+    </select>
 </mapper>

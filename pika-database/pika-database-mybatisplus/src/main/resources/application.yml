@@ -22,7 +22,7 @@ spring:
     min-idle: 1
 
 mybatis-plus:
-  mapper-locations: classpath*:com/pika/boot/mapper*.xml
+  mapper-locations: classpath*:com/pika/boot/dao/*Dao.xml
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
