@@ -23,7 +23,6 @@ spring:
 
 mybatis-plus:
   mapper-locations: classpath*:com/pika/boot/mapper*.xml
-#  config-location: classpath:mybatis.cfg.xml
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
 
