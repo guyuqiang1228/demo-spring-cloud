@@ -35,7 +35,7 @@
         <!-- druid -->
         <dependency>
             <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
+            <artifactId>druid-spring-boot-starter</artifactId>
         </dependency>
 
         <!-- swagger -->
