@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>pika-database-mybatisplus</artifactId>
+    <artifactId>pika-database-mybatisplus-dynamic</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -22,14 +22,11 @@
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
         </dependency>
-        <!-- mybatis-plus-generator -->
+        <!-- mybatis-plus多数据源依赖 -->
         <dependency>
             <groupId>com.baomidou</groupId>
-            <artifactId>mybatis-plus-generator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.freemarker</groupId>
-            <artifactId>freemarker</artifactId>
+            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+            <version>3.3.1</version>
         </dependency>
         <!-- mysql驱动包 -->
         <dependency>
