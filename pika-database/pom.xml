@@ -16,6 +16,7 @@
     <modules>
         <module>pika-database-mybatisplus</module>
         <module>pika-database-dynamic</module>
+        <module>pika-database-jpa</module>
     </modules>
 
     <dependencyManagement>
