@@ -31,6 +31,7 @@
     <!--【项目子模块】-->
     <modules>
         <module>pika-database</module>
+        <module>pika-mq</module>
     </modules>
 
     <!--子模块继承之后，提供作用：锁定版本,子module不用写groupId和version -->
