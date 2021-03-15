@@ -30,20 +30,19 @@ public class WorkerController {
     @Resource
     private WorkerBiz workerBiz;
 
-    @ApiOperation(value = "获得worker名字")
+    @ApiOperation(value = "mybatisPlus自带方法获得worker名字")
     @GetMapping("/name/{id}")
     public String getName(@PathVariable("id") Integer id) {
         Worker worker = workerBiz.getById(id);
         return worker.getName();
     }
 
-    @ApiOperation(value = "111")
+    @ApiOperation(value = "sql语句获得worker信息")
     @GetMapping("/info/{id}")
     public String getInfo(@PathVariable("id") Integer id) {
         Worker worker = workerBiz.getInfoById(id);
         return worker.toString();
     }
-
 
 
 }

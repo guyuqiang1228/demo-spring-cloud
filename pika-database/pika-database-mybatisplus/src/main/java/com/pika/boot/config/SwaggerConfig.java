@@ -34,8 +34,8 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("Kitty API Doc")
-                .description("This is a restful api document of Kitty.")
+                .title("Pika API Doc")
+                .description("This is a restful api document of Pika!")
                 .contact(new Contact("guyuqiang", "个人网址", "你的邮箱"))
                 .version("1.0")
                 .build();

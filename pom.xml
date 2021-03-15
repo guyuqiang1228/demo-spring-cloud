@@ -2,12 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-    <modelVersion>4.0.0</modelVersion>
-
     <!-- 本项目GAV坐标 -->
     <groupId>com.pika-cloud</groupId>
     <artifactId>pika</artifactId>
     <version>1.0-SNAPSHOT</version>
+
+    <modelVersion>4.0.0</modelVersion>
 
     <packaging>pom</packaging>
 
@@ -112,14 +112,13 @@
                 </configuration>
             </plugin>
         </plugins>
+        <!-- 重新指明资源文件位置 -->
         <resources>
             <resource>
                 <directory>src/main/java</directory>
-                <includes>
-                    <include>**/*.properties</include>
-                    <include>**/*.xml</include>
-                </includes>
-                <filtering>false</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
             </resource>
         </resources>
     </build>
