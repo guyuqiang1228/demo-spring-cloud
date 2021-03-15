@@ -5,6 +5,9 @@ spring:
   # 应用名
   application:
     name: demo-database-dynamic
+  devtools:
+    livereload:
+      port: 35729
   # 注册到nacos注册中心
   cloud:
     nacos:
