@@ -3,7 +3,6 @@ package com.pika.boot;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import springfox.documentation.oas.annotations.EnableOpenApi;
 import sun.misc.Unsafe;
 
 import java.lang.reflect.Field;
@@ -14,12 +13,11 @@ import java.lang.reflect.Field;
  */
 @SpringBootApplication
 @EnableDiscoveryClient
-@EnableOpenApi
-public class JpaApplication {
+public class RedisApplication {
 
     public static void main(String[] args) {
 //        disableWarning();
-        SpringApplication.run(JpaApplication.class, args);
+        SpringApplication.run(RedisApplication.class, args);
     }
 
     public static void disableWarning() {
