@@ -19,7 +19,7 @@ public class MyFilter implements Filter {
 
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
-        log.info("MyFilter---doFilter");
+        // log.info("MyFilter---doFilter");
         // 放行请求
         filterChain.doFilter(servletRequest,servletResponse);
     }

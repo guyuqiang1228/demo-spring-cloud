@@ -1,5 +1,6 @@
 package com.pika.boot;
 
+import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceAutoConfigure;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
@@ -9,10 +10,9 @@ import sun.misc.Unsafe;
 
 import java.lang.reflect.Field;
 
-@SpringBootApplication
+@SpringBootApplication(exclude = DruidDataSourceAutoConfigure.class)
 @EnableDiscoveryClient
 @EnableOpenApi
-@ServletComponentScan("com.pika.boot.filters")
 public class DynamicMybatisApplication {
 
     public static void main(String[] args) {
