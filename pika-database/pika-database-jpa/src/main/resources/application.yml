@@ -7,6 +7,11 @@ spring:
   devtools:
     livereload:
       port: 35731
+  # 注册到nacos注册中心
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1/pika?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8
@@ -19,4 +24,9 @@ spring:
     show-sql: true
     open-in-view: true
 
-
+# nacos配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
