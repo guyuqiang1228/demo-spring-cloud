@@ -20,4 +20,13 @@ public class JpaApplicationTest {
         System.out.println(all);
     }
 
+    @Test
+    public void testSave() {
+        Student student = new Student();
+        student.setName("李四");
+        student.setAge(22);
+        studentRepository.save(student);
+        System.out.println(123);
+    }
+
 }

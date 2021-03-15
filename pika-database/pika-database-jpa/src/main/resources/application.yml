@@ -2,6 +2,11 @@ server:
   port: 8886
 
 spring:
+  application:
+    name: pika-jpa-service
+  devtools:
+    livereload:
+      port: 35731
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://127.0.0.1/pika?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8
@@ -12,5 +17,6 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+    open-in-view: true
 
 
