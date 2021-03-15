@@ -1,0 +1,40 @@
+server:
+  port: 8887
+
+spring:
+  # 应用名
+  application:
+    name: demo-database-dynamic
+  # 注册到nacos注册中心
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  datasource:
+    dynamic:
+      primary: master #设置默认的数据源或者数据源组,默认值即为master
+      strict: false #设置严格模式,默认false不启动. 启动后在未匹配到指定数据源时候会抛出异常,不启动则使用默认数据源.
+      datasource:
+        master:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://127.0.0.1/pika1?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8
+          username: root
+          password: 123456
+        slave_1:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://127.0.0.1/pika2?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8
+          username: root
+          password: 123456
+
+mybatis-plus:
+  mapper-locations: classpath*:com/pika/boot/dao/*Dao.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+# nacos配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
