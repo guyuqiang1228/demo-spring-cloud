@@ -33,8 +33,8 @@ public class BookController {
 
     @GetMapping("/{id}")
     @ApiOperation("根据id获取book")
-    @DS("master")
-    public String getApple(@PathVariable("id") Integer id) {
+    @DS("db1")
+    public String getBook(@PathVariable("id") Integer id) {
         Book book = bookBiz.getById(id);
         return book.toString();
     }

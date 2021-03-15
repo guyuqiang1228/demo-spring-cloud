@@ -16,7 +16,6 @@ import org.springframework.stereotype.Service;
  * @since 2021-03-12
  */
 @Service
-@DS("master")
 public class BookBizImpl extends ServiceImpl<BookDao, Book> implements BookBiz {
 
 }

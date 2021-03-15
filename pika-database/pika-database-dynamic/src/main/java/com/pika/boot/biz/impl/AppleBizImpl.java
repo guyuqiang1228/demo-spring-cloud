@@ -16,7 +16,6 @@ import org.springframework.stereotype.Service;
  * @since 2021-03-12
  */
 @Service
-@DS("slave_1")
 public class AppleBizImpl extends ServiceImpl<AppleDao, Apple> implements AppleBiz {
 
 }

@@ -32,7 +32,7 @@ public class AppleController {
 
     @GetMapping("/{id}")
     @ApiOperation("根据id获取apple")
-    @DS("slave_1")
+    @DS("db2")
     public String getApple(@PathVariable("id") Integer id) {
         Apple apple = appleBiz.getById(id);
         return apple.toString();
