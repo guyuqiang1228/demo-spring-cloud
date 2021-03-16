@@ -1,0 +1,12 @@
+server:
+  port: 8884
+
+spring:
+  # 应用名
+  application:
+    name: demo-base
+  devtools:
+    livereload:
+      port: 35731
+
+
