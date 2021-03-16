@@ -3,13 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>pika-mq</artifactId>
+        <artifactId>pika-database</artifactId>
         <groupId>com.pika-cloud</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>pika-mq-kafka</artifactId>
+    <artifactId>pika-database-sharding</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -17,9 +17,11 @@
     </properties>
 
     <dependencies>
+        <!-- sharding -->
         <dependency>
-            <groupId>org.springframework.kafka</groupId>
-            <artifactId>spring-kafka</artifactId>
+            <groupId>org.apache.shardingsphere</groupId>
+            <artifactId>sharding-jdbc-spring-boot-starter</artifactId>
+            <version>4.1.1</version>
         </dependency>
     </dependencies>
 

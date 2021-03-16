@@ -20,6 +20,7 @@
         <module>pika-database-redis</module>
         <module>pika-database-mongodb</module>
         <module>pika-database-es</module>
+        <module>pika-database-sharding</module>
     </modules>
 
     <dependencyManagement>
