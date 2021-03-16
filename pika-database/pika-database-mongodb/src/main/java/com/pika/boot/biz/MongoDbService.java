@@ -93,7 +93,7 @@ public class MongoDbService {
      * @param search
      * @return
      */
-    public List<Book> findByLikes(String search) {
+    public List<Book> findByName(String search) {
         Query query = new Query();
         Pattern pattern = Pattern.compile("^.*" + search + ".*$", Pattern.CASE_INSENSITIVE);
         Criteria.where("name").regex(pattern);

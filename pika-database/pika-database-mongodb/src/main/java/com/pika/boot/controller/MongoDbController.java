@@ -54,8 +54,8 @@ public class MongoDbController {
 
     @ApiOperation("根据名字模糊查询")
     @GetMapping("/findByName")
-    public List<Book> findByLikes(@RequestParam String search) {
-        return mongoDbService.findByLikes(search);
+    public List<Book> findByName(@RequestParam String name) {
+        return mongoDbService.findByName(name);
     }
 
 }
