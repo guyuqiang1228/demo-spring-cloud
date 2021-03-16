@@ -1,0 +1,31 @@
+server:
+  port: 8881
+
+spring:
+  application:
+    name: pika-rabbitmq-service
+  devtools:
+    livereload:
+      port: 35735
+  # 注册到nacos注册中心
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /dev
+#    listener:
+#      direct:
+#        acknowledge-mode: manual
+
+# nacos配置
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
