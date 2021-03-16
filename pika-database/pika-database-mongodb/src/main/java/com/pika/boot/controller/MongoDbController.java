@@ -40,22 +40,20 @@ public class MongoDbController {
         return mongoDbService.getBookById(id);
     }
 
-    @GetMapping("/findOneByName")
-    public Book findOneByName(@RequestParam String name) {
-        return mongoDbService.getBookByName(name);
-    }
-
+    @ApiOperation("修改")
     @PostMapping("/update")
     public String update(@RequestBody Book book) {
         return mongoDbService.updateBook(book);
     }
 
+    @ApiOperation("删除")
     @GetMapping("/delById/{id}")
     public String delById(@PathVariable("id") String id) {
         return mongoDbService.deleteBookById(id);
     }
 
-    @GetMapping("/findlikes")
+    @ApiOperation("根据名字模糊查询")
+    @GetMapping("/findByName")
     public List<Book> findByLikes(@RequestParam String search) {
         return mongoDbService.findByLikes(search);
     }

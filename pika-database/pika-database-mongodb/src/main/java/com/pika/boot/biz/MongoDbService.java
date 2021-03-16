@@ -50,19 +50,9 @@ public class MongoDbService {
      * @return
      */
     public Book getBookById(String id) {
-        Query query = new Query(Criteria.where("_id").is(id));
-        return mongoTemplate.findOne(query, Book.class);
-    }
-
-    /**
-     * 根据名称查询
-     *
-     * @param name
-     * @return
-     */
-    public Book getBookByName(String name) {
-        Query query = new Query(Criteria.where("name").is(name));
-        return mongoTemplate.findOne(query, Book.class);
+        Query query = new Query(Criteria.where("id").is(id));
+        Book book = mongoTemplate.findOne(query, Book.class);
+        return book;
     }
 
     /**
@@ -72,7 +62,7 @@ public class MongoDbService {
      * @return
      */
     public String updateBook(Book book) {
-        Query query = new Query(Criteria.where("_id").is(book.getId()));
+        Query query = new Query(Criteria.where("id").is(book.getId()));
         Update update = new Update().set("publish", book.getPublish()).set("info", book.getInfo()).set("updateTime",
                 new Date());
         // updateFirst 更新查询返回结果集的第一条
