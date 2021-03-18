@@ -36,7 +36,7 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("Pika API Doc")
                 .description("This is a restful api document of Pika!")
-                .contact(new Contact("guyuqiang", "个人网址", "你的邮箱"))
+                .contact(new Contact("guyuqiang", "url", "email"))
                 .version("1.0")
                 .build();
     }
