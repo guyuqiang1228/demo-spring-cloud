@@ -4,7 +4,7 @@ server:
 spring:
   # 应用名
   application:
-    name: demo-database-mybatisplus
+    name: pika-database-mybatisplus
   devtools:
     livereload:
       port: 35730
