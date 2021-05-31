@@ -62,7 +62,11 @@ spring:
 mybatis-plus:
   mapper-locations: classpath*:com/pika/boot/dao/*Dao.xml
   configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
+logging:
+  level:
+    com.pika: debug
 
 # nacos配置
 management:

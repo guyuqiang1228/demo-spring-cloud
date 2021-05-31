@@ -18,10 +18,10 @@
         <maven.compiler.target>11</maven.compiler.target>
         <java.version>11</java.version>
         <spring-boot.version>2.5.0</spring-boot.version>
-        <spring-cloud.version>2020.0.2</spring-cloud.version>
+        <spring-cloud.version>2020.0.3</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
         <lombok.version>1.18.20</lombok.version>
-        <hutool.version>5.6.5</hutool.version>
+        <hutool.version>5.6.6</hutool.version>
         <lang3.version>3.12.0</lang3.version>
         <swagger.version>3.0.0</swagger.version>
         <knife4j.version>3.0.2</knife4j.version>
