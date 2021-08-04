@@ -21,7 +21,7 @@
         <spring-cloud.version>2020.0.3</spring-cloud.version>
         <spring-cloud-alibaba.version>2021.1</spring-cloud-alibaba.version>
         <lombok.version>1.18.20</lombok.version>
-        <hutool.version>5.7.5</hutool.version>
+        <hutool.version>5.7.7</hutool.version>
         <lang3.version>3.12.0</lang3.version>
         <swagger.version>3.0.0</swagger.version>
         <knife4j.version>3.0.3</knife4j.version>
